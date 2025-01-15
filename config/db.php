@@ -8,13 +8,7 @@ class Db{
     {
         $this->conexion = new mysqli('localhost', 'root', '', 'example');
         
-        return $this->conexion;
-    }
-
-
-    function imprimir()
-    {
-        echo "imprimir";
+        
     }
 
 }
