@@ -10,6 +10,8 @@ class Users extends Db{
         $sql = "SELECT * FROM users";
          $consulta = $this->conexion->query($sql)->fetch_object();
          return $consulta;
+
+         //consultar todos los registros de la tabla
     }
 
     function store(){
