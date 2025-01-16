@@ -26,5 +26,7 @@ class Users extends Db{
     function searchByName(){}
 
 }
+//$objetct = new Users();
+//$objetct->store();
 
 

@@ -7,9 +7,11 @@ class UserController {
     {
         $objet = new Users();
         $listUsers = $objet->index();
-        echo $listUsers->names . ' ' . $listUsers->phone;
+        echo $listUsers->names . ' ' . $listUsers->phone; 
+        echo $listUsers->email;
     }
 }
 
-$objet = new UserController();
-$objet->index();
+$object = new UserController();
+$object->index();
+
