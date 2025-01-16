@@ -18,6 +18,15 @@ class UserController {
         return $formUser;
 
     }
+
+
+    public static function store2($names, $phone, $email)
+    {                               //con parametros
+        $object = new User();
+        $formUser = $object->store($names, $phone, $email);
+        return $formUser;
+
+    }
 }
 
 

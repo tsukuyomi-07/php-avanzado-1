@@ -28,6 +28,22 @@ class User extends Db{
         return $sql;
     }
 
+    function store2($names, $phone, $email){          //con parametros
+
+
+    
+
+
+        $sql = "INSERT INTO users VALUES (NULL, '$names', '$phone', '$email')";
+        $this->conexion->query($sql);
+        return $sql;
+    }
+
+
+
+
+
+
     function create(){}
 
     function destroy(){}
@@ -35,7 +51,8 @@ class User extends Db{
     function searchByName(){}
 
 }
-// $objetct = new User();
-// $objetct->store();
+
+
+
 
 
