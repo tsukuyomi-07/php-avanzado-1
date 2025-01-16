@@ -11,10 +11,10 @@ class UserController {
     }
 
 
-    public static function store($names, $phone, $email)
+    public static function store()
     {
         $object = new User();
-        $formUser = $object->store($names, $phone, $email);
+        $formUser = $object->store();
         return $formUser;
 
     }

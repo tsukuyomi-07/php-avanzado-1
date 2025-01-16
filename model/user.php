@@ -15,7 +15,14 @@ class User extends Db{
          //consultar todos los registros de la tabla
     }
 
-    function store($names, $phone, $email){
+    function store(){
+
+
+        $names = $_REQUEST['names'];
+        $phone = $_REQUEST['phone'];
+        $email = $_REQUEST['email'];
+
+
         $sql = "INSERT INTO users VALUES (NULL, '$names', '$phone', '$email')";
         $this->conexion->query($sql);
         return $sql;
