@@ -2,7 +2,8 @@
 
 require_once "../config/db.php";
 
-class Users extends Db{
+
+class User extends Db{
 
     
 
@@ -14,9 +15,10 @@ class Users extends Db{
          //consultar todos los registros de la tabla
     }
 
-    function store(){
-        $sql = "INSERT INTO users VALUES (NULL, 'sebas', 5555555, 'sebas@gmail.com')";
+    function store($names, $phone, $email){
+        $sql = "INSERT INTO users VALUES (NULL, '$names', '$phone', '$email')";
         $this->conexion->query($sql);
+        return $sql;
     }
 
     function create(){}
@@ -26,7 +28,7 @@ class Users extends Db{
     function searchByName(){}
 
 }
-//$objetct = new Users();
-//$objetct->store();
+// $objetct = new User();
+// $objetct->store();
 
 

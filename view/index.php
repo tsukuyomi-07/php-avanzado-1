@@ -1,3 +1,8 @@
+<?php
+require_once '../controlador/userController.php';
+$listUsers = UserController::index();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +12,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1></h1>
-    <label for=""></label>
+    <h1>Hola</h1>
+    
+    
 </body>
 </html>

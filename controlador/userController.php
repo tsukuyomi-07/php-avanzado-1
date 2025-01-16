@@ -3,15 +3,23 @@ require_once "../model/user.php";
 
 class UserController {
 
-    function index()
+    public static function index()
     {
-        $objet = new Users();
-        $listUsers = $objet->index();
-        echo $listUsers->names . ' ' . $listUsers->phone; 
-        echo $listUsers->email;
+        $object = new User();
+        $listUsers = $object->index();
+       return $listUsers;
+    }
+
+
+    public static function store($names, $phone, $email)
+    {
+        $object = new User();
+        $formUser = $object->store($names, $phone, $email);
+        return $formUser;
+
     }
 }
 
-$object = new UserController();
-$object->index();
+
+
 
